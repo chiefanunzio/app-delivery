@@ -1,0 +1,281 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #home-restaurant .jumbotron {
+          background-image: url(../img/grilled.jpg);
+          background-size: cover;
+          background-position-y: bottom;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          width: auto;
+          height: 100vh;
+          padding: 30% 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+     }
+
+     #home-restaurant .jumbotron h1 {
+          font-family: "Itim", cursive;
+          font-size: 40px;
+          letter-spacing: 2px;
+          font-size: 5.5vw;
+          padding: 15px 0;
+          color: rgba(255, 194, 68, 1);
+     }
+
+     #home-restaurant .jumbotron div {
+          font-size: 2vw;
+     }
+
+     #home-restaurant .menu {
+          justify-content: center;
+          flex-wrap: wrap;
+     }
+
+     #home-restaurant .menu .aside-menu {
+          flex-basis: 100%;
+          display: flex;
+          justify-content: center;
+     }
+
+     #home-restaurant .menu .aside-menu ul li {
+          border-top: 3px solid #ffc244;
+          border-left: 0;
+     }
+
+     #home-restaurant .aside-menu {
+          position: inherit;
+     }
+
+     #home-restaurant .menu .container-menu {
+          flex-basis: 60%;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li p {
+          font-size: 30px;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li {
+          flex-basis: 100%;
+          }
+
+     #home-restaurant .menu .container-menu .products > div ul li img {
+          width: 100px;
+          height: auto;
+          vertical-align: super;
+     }
+
+     #home-restaurant .menu .carrello {
+          flex-basis: 40%;
+     }
+
+     #home-restaurant .menu .carrello h2 {
+          padding: 150px 20px 10px 0;
+     }
+
+     .aside-menu, #home-restaurant .carrello {
+          top: 0;
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     #home-restaurant .jumbotron {
+          background-image: url(../img/grilled.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position-y: bottom;
+          height: 100vh;
+          width: auto;
+          padding: 30% 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+
+     }
+
+     #home-restaurant .jumbotron h1 {
+          font-family: "Itim", cursive;
+          font-size: 9vw;
+          letter-spacing: 2px;
+          padding: 20px 10%;
+          color: rgba(255, 194, 68, 1);
+     }
+
+     #home-restaurant .jumbotron div {
+          font-size: 7vw;
+     }
+
+     #home-restaurant .menu {
+          justify-content: center;
+          flex-wrap: wrap;
+     }
+
+     #home-restaurant .menu .aside-menu {
+          flex-basis: 100%;
+          display: flex;
+          justify-content: center;
+     }
+
+     #home-restaurant .menu .aside-menu ul li {
+          border-top: 3px solid #ffc244;
+          border-left: 0;
+     }
+
+     #home-restaurant .aside-menu {
+          position: inherit;
+     }
+
+     #home-restaurant .menu .aside-menu ul li a {
+          font-size: 50px;
+          }
+
+     #home-restaurant .menu .container-menu {
+          flex-basis: 100%;
+          overflow: auto;
+     }
+
+     #home-restaurant .menu .container-menu .products > div h2 {
+          font-size: 60px;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li .title h3 {
+          font-size: 40px;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li .title h5 {
+          font-size: 30px;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li .description p {
+         font-size: 30px;
+     //     display: none;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-plus {
+          font-size: 40px;
+          }
+
+     #home-restaurant .menu .container-menu .products > div ul {
+          // flex-wrap: nowrap;
+          // overflow: auto;
+          justify-content: flex-start;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li {
+          flex-basis: 100%;
+          border-radius: 10px;
+          background: #f1f1f1;
+          box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+          transition: all 0.5s linear;
+          grid-template-columns: 200px 1fr;
+          padding: 20px;
+          margin: 50px 20px;
+          color: $blue;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li img {
+          width: 150px;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li div:last-child .fa-euro-sign {
+          font-size: 35px;
+          }
+
+     #home-restaurant .menu .container-menu .products > div ul li h4 {
+          border-radius: 10px;
+          font-weight: normal;
+          font-size: 40px;
+     }
+
+     #home-restaurant .menu .carrello-icona {
+          display: block;
+          flex-basis: 100%;
+          position:fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: $bluelight;
+          z-index: 10;
+          padding: 0 10%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+     }
+
+     #home-restaurant .menu .carrello-icona .carrello-dropdown {
+          height: 40vh;
+         overflow: auto;
+          }
+
+     #home-restaurant .menu .carrello {
+          flex-basis: 40%;
+          display: none;
+     }
+
+     #home-restaurant .menu .carrello h2 {
+          padding: 150px 20px 10px 0;
+          font-size: 60px;
+     }
+
+     #home-restaurant .menu .carrello .no-products h3 {
+          font-size: 40px;
+     }
+
+     #home-restaurant .menu .carrello ul li div:first-child {
+          flex-basis: 20%;
+     }
+
+     #home-restaurant .menu .carrello ul li div {
+          flex-basis: 60%;
+     }
+
+     #home-restaurant .menu .carrello ul li div:last-child {
+          flex-basis: 20%;
+     }
+
+     #home-restaurant .menu .container-menu .products > div ul li .fa-plus {
+          font-size: 50px;
+          padding: 10px;
+          }
+
+     #home-restaurant .menu .carrello ul li div .fa-minus {
+         font-size: 50px;
+          padding: 10px;
+     }
+
+     #home-restaurant .menu .carrello ul li div .fa-plus {
+          font-size: 50px;
+          padding: 10px;
+          }
+
+     #home-restaurant .menu .carrello ul li div h4 {
+          font-size: 35px;
+          }
+
+     #home-restaurant .menu .carrello ul li div h5 {
+          font-weight: normal;
+          font-size: 35px;
+     }
+
+     #home-restaurant .menu .carrello .fa-euro-sign {
+          font-size: 25px;
+     }
+
+     #home-restaurant .menu .carrello span {
+          font-size: 35px;
+     }
+
+     #home-restaurant .menu .carrello div button {
+          font-size: 30px;
+          padding: 30px;
+          }
+
+     .aside-menu, #home-restaurant .carrello {
+          top: 0;
+     }
+
+}

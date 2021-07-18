@@ -1,0 +1,49 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+
+    #createProduct {
+        form {
+            flex-basis: 100%;
+        }
+    }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+    #createProduct {
+        padding: 200px 2%;
+
+        #type-food,
+        #description {   
+            font-size: 40px;
+
+        }
+
+        form {
+            flex-basis: 100%;
+
+            fieldset {
+
+                flex-basis: 100%;
+
+                input {
+                    font-size: 40px;
+                }
+
+                legend {
+                    font-size: 60px;
+                }
+
+                label {
+                    font-size: 50px;
+
+                }
+
+                button {
+                    font-size: 40px;
+                }
+            }
+        }
+
+
+    }
+}

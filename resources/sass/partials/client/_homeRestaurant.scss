@@ -1,0 +1,504 @@
+#home-restaurant {
+    @include baloo;
+    background-color: $whitePastel;
+    color: rgb(21, 22, 22);
+
+    .jumbotron {
+        background-image: url(../img/grilled.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: auto;
+        background-position-y: bottom;
+        height: 100vh;
+        padding: 15% 0;
+        @include flex(column, center, center, nowrap);
+        .jumb{
+          background-color: rgba(37, 56, 95, 0.9);
+          border-radius: 100%;
+          padding: 50px;
+          background-position: left;
+          transition: .6s;
+          &:hover{
+            padding: 100px;
+          }
+          .txt-jumb{
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin: auto;
+          }
+        }
+
+        h1 {
+            @include itim;
+            text-align: center;
+            margin: auto;
+            font-size: 4.5vw;
+            padding: 15px 0;
+            color: rgba(255, 194, 68, 1);
+        }
+
+        div {
+            @include baloo;
+            font-size: 1.3vw;
+            color: rgba(255, 194, 68, 1);
+        }
+    }
+
+
+    .menu {
+        @include flex(row, space-between, flex-start, nowrap);
+        padding: 10% 2% 20% 2%;
+
+
+        .aside-menu {
+            // flex-basis: calc( 100% / 3 - 10px);
+            flex-basis: 20%;
+            color: $blue;
+
+            h2 {
+                @include itim;
+                font-size: 35px;
+                margin: 10px 0;
+            }
+
+            ul {
+                li {
+                    @include baloo;
+                    width: fit-content;
+                    padding: 20px 0 20px 20px;
+                    border-left: 3px solid $yellow;
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    transition: border-color 0.3s linear;
+
+                    &:hover {
+                        border-color: $blue;
+                    }
+
+                    div {
+                        flex-basis: calc(50% - 20px);
+                    }
+
+                    a {
+                        color: $blue;
+                        font-size: 18px;
+                    }
+
+                }
+            }
+        }
+
+        .container-menu {
+            flex-basis: 60%;
+            // flex-basis: calc( 100% / 3 - 50px);
+
+            .box-restaurant {
+                border: 3px solid $yellow;
+                padding: 0 30px 10px;
+                border-radius: 10px;
+                text-align: center;
+
+                legend {
+                    padding: 0 20px;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .copertina {
+                    height: 200px;
+
+                    img {
+                        height: 100%;
+                        border-radius: 10px;
+
+                    }
+                }
+
+                div {
+
+                    * {
+                        padding: 20px 0;
+                    }
+
+
+                    button {
+                        padding: 10px 25px;
+                        border-radius: 5px;
+                        background-color: $yellow;
+                    }
+
+                    &:last-child {
+                        display: flex;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .products {
+                 scroll-behavior: smooth;
+
+                & > div {
+                    // @include neomorphism;
+                    text-align: center;
+                    padding-top: 100px;
+
+                    h2 {
+                        margin-bottom: 30px;
+                        @include baloo;
+                        font-size: 35px;
+                        color: $blue;
+                        font-weight: 600;
+                    }
+
+                    ul {
+                        text-align: left;
+                        border-bottom-left-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        margin-bottom: 40px;
+                        transition: all 0.5s linear;
+                        @include flex(row, flex-start, stretch, wrap);
+
+                        li {
+                            flex-basis: calc(100% / 2 - 50px);
+                            @include neomorphism;
+                            display: grid;
+                            grid-template-columns: 100px 1fr;
+                            grid-template-rows: auto auto auto auto;
+                            padding: 20px;
+                            margin: 15px;
+                            gap: 10px;
+                            grid-template-areas:
+                                "image title"
+                                ". description"
+                                "price price";
+                            color: $blue;
+
+                            img {
+                                grid-area: image;
+                                width: 80px;
+                                height: auto;
+                                vertical-align: super;
+                                border-radius: 10px;
+                            }
+
+                            .title {
+                                grid-area: title;
+
+                                h3 {
+                                    @include baloo;
+                                    font-size: 18px;
+                                }
+
+                                h5 {
+                                    font-weight: normal;
+                                    @include baloo;
+                                    font-size: 17px;
+                                    margin: 10px 0;
+                                }
+
+                            }
+
+                            .description {
+                                grid-area: description;
+
+                                p {
+                                    @include baloo;
+                                    font-size: 17px;
+                                }
+                            }
+
+                            div:last-child {
+                                @include flex(row, space-between, center, nowrap);
+                                grid-area: price;
+                                padding: 0 20px;
+
+                                h4 {
+                                    border-radius: 10px;
+                                    font-weight: normal;
+                                }
+
+                                .fa-plus {
+                                    @include addRemove;
+                                    margin: 0;
+                                }
+
+                                .fa-euro-sign {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .carrello-icona {
+            display: none;
+            height: 200px;
+
+
+                img {
+                    width: 150px;
+                    height: auto;
+                    transition: transform 0.2s linear;
+
+                    &:hover {
+                        transform: scale(1.5);
+                    }
+                }
+
+            .price {
+                margin: 0 0 0 30px;
+                span {
+                    font-size: 40px;
+                }
+
+                i {
+                    font-size: 35px;
+                }
+            }
+
+            .carrello-dropdown {
+                width: 100%;
+                text-align: center;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                padding: 0 10px;
+                position: absolute;
+                bottom: 200px;
+                left: 0;
+                background-color: $bluelight;
+
+                .fa-euro-sign {
+                    font-size: 35px;
+                }
+
+                h2 {
+                    padding: 0 20px 10px 0;
+                    color: $blue;
+                    background-color: $bluelight;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 25px;
+                    border-bottom: 1px solid $blue;
+                    @include baloo;
+                    font-weight: 600;
+                    font-size: 40px;
+                    margin-bottom: 40px;
+                }
+
+                .no-products {
+                    padding: 20px;
+
+                    h3 {
+                        @include baloo;
+                        font-size: 45px;
+                    }
+                }
+
+                ul,
+                h3,
+                span {
+                    color: $blue;
+                    font-size: 40px;
+                }
+
+                ul {
+                    padding: 20px 20px 0 20px;
+                    background-color: $bluelight;
+
+                    li {
+                        @include baloo;
+                        @include flex(row, space-between, flex-start, nowrap);
+
+                        div {
+                            text-align: center;
+                            font-size: 40px;
+
+                            h5 {
+                                font-weight: normal;
+                                font-size: 40px;
+                            }
+
+                            .fa-minus {
+                                @include addRemove;
+                                padding: 10px;
+                                font-size: 40px;
+                                margin: 10px 40px;
+                            }
+
+                            .fa-plus {
+                                @include addRemove;
+                                padding: 10px;
+                                font-size: 40px;
+                                margin: 10px 40px;
+                            }
+                        }
+
+                        div:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+
+                h3 {
+                    @include itim;
+                    font-size: 40px;
+                    font-weight: normal;
+                    padding: 40px 0 10px 0;
+                }
+
+                .totalePrezzo {
+                    margin-bottom: 40px;
+                    font-weight: bold;
+                }
+
+                div {
+                    text-align: center;
+
+                    button {
+                       @include definitiveButtonDesign;
+
+                       a {
+                           font-size: 50px;
+                       }
+                    }
+                }
+
+                i {
+                    color: $blue;
+                }
+            }
+        }
+
+        .carrello {
+            overflow: auto;
+            text-align: center;
+            // flex-basis: 25%;
+            flex-basis: 20%;
+            // border: 3px solid $blue;
+            // background-color: $yellow;
+            // @include neomorphism;
+            border-radius: 25px;
+            padding: 0 10px;
+
+            .fa-euro-sign {
+                font-size: 17px;
+            }
+
+            h2 {
+                padding: 0 20px 10px 0;
+                color: $blue;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 25px;
+                border-bottom: 1px solid $blue;
+                @include baloo;
+                font-size: 35px;
+                // background-color: $bluelight;
+            }
+
+            .no-products {
+                padding: 20px;
+
+                h3 {
+                    @include baloo;
+                    font-size: 20px;
+                }
+            }
+
+            ul,
+            h3,
+            span {
+                color: $blue;
+            }
+
+            ul {
+                padding: 20px 20px 0 20px;
+
+                li {
+                    @include baloo;
+                    @include flex(row, space-between, flex-start, nowrap);
+
+                    div {
+                        text-align: center;
+                        flex-basis: 20%;
+
+                        h5 {
+                            font-weight: normal;
+                            font-size: 18px;
+                        }
+
+                        .fa-minus {
+                            @include addRemove;
+                            padding: 10px;
+                            margin:10px
+                        }
+
+                        .fa-plus {
+                            @include addRemove;
+                            padding: 10px;
+                            margin:10px
+                        }
+                    }
+
+                    .cart-product {
+                        flex-basis: 60%;
+                    }
+
+                    div:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+
+            h3 {
+                @include itim;
+                font-size: 30px;
+                font-weight: normal;
+                padding: 40px 0 10px 0;
+            }
+
+            .totalePrezzo {
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+
+            div {
+                text-align: center;
+
+                button {
+                    @include definitiveButtonDesign;
+                    font-size: 18px;
+
+                    a {
+                        @include baloo;
+                    }
+                }
+            }
+
+            i {
+                color: $blue;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .aside-menu,
+    .carrello {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 150px;
+    }
+
+    // .aside-menu {
+    //     position: sticky;
+    //     position: -webkit-sticky;
+    //     top: 40%;
+    // }
+}

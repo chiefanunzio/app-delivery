@@ -1,0 +1,100 @@
+#checkout {
+     background-color: $whitePastel;
+     padding: 10% 8%;
+
+     section {
+
+          form {
+               @include flex(row, space-between, center, nowrap);
+               margin-bottom: 100px;
+               padding: 0 40px 40px;
+               @include neomorphism;
+
+               fieldset {
+                    flex-basis: calc(50% - 30px);
+                    background-color: $bluelight;
+                    border: 3px solid $blue;
+                    padding: 40px;
+                    border-radius: 10px;
+
+                    legend {
+                         @include itim;
+                         padding: 20px;
+                    }
+
+                    label, input {
+                         @include baloo;
+                         margin: 20px;
+                         color: $blue;
+                    }
+
+                    input {
+                         width: 90%;
+                         border-radius: 10px;
+                         padding: 10px 20px;
+                         border: 0;
+                         background-color: $bluelight;
+                         box-shadow: inset 5px 5px 10px #bfc1cb,
+                                     inset -5px -5px 10px #ffffff;
+                    }
+
+                    button {
+                         @include definitiveButtonDesign;
+                         font-size: 20px;
+                         margin: 20px 0;
+                    }
+               }
+
+               .payment-card {
+                    text-align: center;
+               }
+
+               .bt-drop-in-wrapper {
+                    background-color: $blue;
+                    border-radius: 25px;
+               }
+
+               .braintree-sheet {
+                    background-color: $whitePastel;
+                    border-bottom-left-radius: 25px;
+                    border-bottom-right-radius: 25px;
+               }
+
+               .braintree-sheet__header {
+                    border-color: $blue;
+               }
+
+               .braintree-sheet__text {
+                    color: $blue;
+                    @include itim;
+                    font-size: 20px;
+               }
+
+               .braintree-form__label {
+                    color: $blue;
+                    @include baloo;
+                    font-size: 20px;
+               }
+
+               ::placeholder {
+                    color: $blue;
+               }
+
+               .braintree-form__field {
+                    background-color: $whitePastel;
+                    @include neomorphismIn;
+                    border-radius: 10px;
+               }
+
+               .braintree-sheet__content--form .braintree-form__field-group .braintree-form__field .braintree-form__hosted-field {
+                    border-radius: 10px;
+                    border: 0;
+               }
+
+               .braintree-upper-container:before {
+                    border-bottom-left-radius: 25px;
+                    border-bottom-right-radius: 25px;
+               }
+          }
+     }
+}

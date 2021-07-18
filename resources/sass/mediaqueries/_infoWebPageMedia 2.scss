@@ -1,0 +1,78 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #chi-siamo .banner div h1 {
+          font-size: 5vw;
+     }
+
+     #chi-siamo .map .attach {
+          flex-basis: 50%;
+          padding: 26% 0;
+     }
+
+     #chi-siamo .map .text {
+          flex-basis: 40%;
+     }
+
+     #chi-siamo .map .text h2 {
+          font-size: 5vw;
+     }
+
+     #chi-siamo .we .text-box {
+          padding: 200px 10% 0 10%;
+     }
+
+     #chi-siamo .we .text-box p {
+          font-size: 22px;
+     }
+
+     #chi-siamo .box ul li {
+          flex-basis: calc(40% - 20px);
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     #chi-siamo .banner div h1 {
+          font-size: 5vw;
+     }
+
+     #chi-siamo .map {
+          display: flex;
+          flex-direction: column;
+     }
+
+     #chi-siamo .map .attach {
+          flex-basis: 50%;
+          padding: 26%;
+          min-height: 600px;
+     }
+
+     #chi-siamo .map .text {
+          flex-basis: 40%;
+          margin: 20px 0 0 0;
+     }
+
+     #chi-siamo .map .text h2 {
+          font-size: 7vw;
+     }
+
+     #chi-siamo .we .text-box {
+          padding: 200px 5% 0 5%;
+     }
+
+     #chi-siamo .we .text-box p {
+          font-size: 45px;
+     }
+
+     #chi-siamo .box ul li {
+          flex-basis: calc(50% - 20px);
+     }
+
+     #chi-siamo .box ul li h2 {
+          font-size: 60px;
+          letter-spacing: 2px;
+     }
+
+     #chi-siamo .box ul li h5 {
+          font-family: "Baloo 2", cursive;
+          font-size: 50px;
+     }
+}

@@ -1,0 +1,338 @@
+
+@mixin itim {
+    font-family: 'Itim', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+@mixin baloo {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+}
+
+@mixin raleway {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+@mixin buttonDesign($color) {
+    background-color: $color;
+    border: 1px solid $color;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.5s linear;
+
+    &:hover {
+        box-shadow: 5px 10px 3px rgb(51, 50, 50);
+        border-color: black;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@mixin theButtonDesign($color, $border, $shadow) {
+    background-color: $color;
+    border: 2px solid $border;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: all 0.5s linear;
+
+    &:hover {
+        box-shadow: 5px 10px 3px $shadow;
+        border-color: $border;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@mixin flex($direction, $content, $item, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $item;
+    flex-wrap: $wrap;
+}
+
+@mixin checkbox {
+    -webkit-appearance: none;
+    background-color: $yellow;
+    border: 2px solid $blue;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3s linear;
+    position: relative;
+
+    &:checked {
+        background-color: $yellow;
+        // border-color: $red;
+        border: 2px solid $red;
+    }
+
+    &:checked:after {
+        content: '\2714';
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $red;
+    }
+}
+
+@mixin form {
+
+    @include flex(row, center, center, nowrap);
+    background-color: $whitePastel;
+    padding: 10% 8%;
+
+    
+
+    form {
+        flex-basis: 50%;
+        padding: 0 40px 40px;
+        @include neomorphism;   
+
+        #myfilebutton {
+            @include neomorphismIn;
+            @include baloo;
+            color: $blue;   
+            margin: 20px 0;      
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: 0;
+            background-color: $bluelight;
+            box-shadow: inset 5px 5px 10px #bfc1cb,
+                inset -5px -5px 10px #ffffff;
+        }
+
+        fieldset {
+            border: 3px solid $blue;
+            background-color: $bluelight;
+            padding: 40px;
+            border-radius: 10px;   
+
+            #type-food,
+            #description {
+                @include baloo;
+                margin: 20px 0;
+                background-color: $bluelight;
+
+            }
+
+            legend {
+                @include itim;
+                padding: 20px;
+            }
+
+            label,
+            input {    
+                @include baloo;
+                margin: 20px 0;
+                color: $blue;
+            }
+
+            input {
+                width: 100%;
+                border-radius: 10px;
+                padding: 10px 20px;
+                border: 0;
+                background-color: $bluelight;
+                box-shadow: inset 5px 5px 10px #bfc1cb,
+                    inset -5px -5px 10px #ffffff;
+            }
+
+            button {
+                @include definitiveButtonDesign();
+            }
+        }
+    }
+}
+
+@mixin wave($background-top, $background-bottom) {
+    position: relative;
+    background: $background-top;
+    height: 20vh;
+    z-index: -1;
+
+    .wave {
+        position: absolute;
+        height: 250px;
+        width: 100%;
+        background: $background-top;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .wave::before,
+    .wave::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50% 100%;
+    }
+
+    .wave::before {
+        width: 55%;
+        height: 100%;
+        background-color: $background-top;
+        right: -1.5%;
+        top: 40%;
+
+    }
+
+    .wave::after {
+        width: 55%;
+        height: 109%;
+        background-color: $background-bottom;
+        left: -1.5%;
+        top: 60%;
+    }
+}
+
+@mixin theWave($background-top, $background-bottom) {
+    background-color: $background-bottom;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        background: $background-top;
+        height: 20vh;
+        z-index: -1;
+
+        .wave {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            background: $background-top;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .wave::before,
+        .wave::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 50% 100%;
+        }
+
+        .wave::before {
+            width: 55%;
+            height: 100%;
+            background-color: $background-top;
+            right: -1.5%;
+            top: 40%;
+
+        }
+
+        .wave::after {
+            width: 55%;
+            height: 109%;
+            background-color: $background-bottom;
+            left: -1.5%;
+            top: 60%;
+        }
+    }
+}
+
+@mixin neomorphism {
+    border-radius: 10px;
+    background: $whitePastel;
+    box-shadow: 5px 5px 10px #cdcdcd,
+        -5px -5px 10px #ffffff;
+    transition: all 0.5s linear;
+
+
+    &:hover {
+        box-shadow: 12px -12px 24px #bdbdbd,
+            -12px 12px 24px #ffffff;
+    }
+}
+
+@mixin neomorphismNoHover {
+    border-radius: 10px;
+    background: $whitePastel;
+    box-shadow: 5px 5px 10px #cdcdcd,
+        -5px -5px 10px #ffffff;
+    transition: all 0.5s linear;
+}
+
+@mixin neomorphismIn {
+    border-radius: 10px;
+    background: $whitePastel;
+    box-shadow: inset 5px 5px 10px #cdcdcd,
+        inset -5px -5px 10px #ffffff;
+    transition: all 0.5s linear;
+}
+
+@mixin addRemove {
+    color: $blue;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: $bluelight;
+    transition: all 0.2s linear;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+@mixin definitiveButtonDesign {
+    background-color: $yellow;
+    border: 2px solid $blue;
+    border-radius: 10px;
+    color: $blue;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    transition: .3s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    
+    &::after {
+        background-color: $blue;
+        border-radius: 10px;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%, 0) rotate(10deg);
+        transform-origin: top left;
+        transition: .3s transform ease-out;
+        will-change: transform;
+        z-index: -1
+    }
+    
+    &:hover::after {
+        transform: translate(0, 0);
+    }
+    &:hover {
+        border: 2px solid $yellow;
+        color: $yellow;
+        transform: scale(1.05);
+        will-change: transform;
+    }
+
+    &:hover a {
+        color: $yellow;
+    }
+
+
+    a {
+        @include baloo;
+        color: $blue;
+    }
+}

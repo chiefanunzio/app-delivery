@@ -1,0 +1,127 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+    #report .container-menu {
+        padding: 40px 5%;
+        margin: auto;
+        padding-bottom: 200px;
+    }
+
+    #report .container-menu .products-box .info {
+        flex-basis: 40%;
+        border-left: 3px solid #ffc244;
+        padding-left: 10px;
+        position: sticky;
+        position: -webkit-sticky;   
+        top: 300px;
+    }
+
+    #report .container-menu .products-box .products {
+        flex-basis: 100%;   
+    }   
+    
+    #report .container-menu .products-box div .products .product-box {
+       
+        flex-basis: 100%;   
+    }
+
+    #report .container-menu .products-box div .products .product-box div h3,
+    #report .container-menu .products-box div .products .product-box div span{
+        font-size: 30px;   
+    }   
+    #report .jumbotron div{
+        font-size: 2.3vw;
+    }
+
+}      
+
+@media (max-width: 998px) AND (min-width: 768px) {
+    #report .container-menu {
+        padding: 40px 5%;
+        margin: auto;
+        padding-bottom: 200px;
+    }
+
+    #report .jumbotron div {
+        font-size: 2.3vw;
+    }
+       
+    #report .jumbotron h1 {
+        font-size: 7vw;
+    }
+
+    #report .jumbotron div {
+        font-size: 3vw;
+    }
+
+    #report .container-menu>div>a {
+        font-size: 40px;
+    }
+
+    #report .container-menu .products-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    #report .container-menu .products-box .info {
+        position: inherit;
+        top: 0;
+        @include flex(row, space-between, stretch, wrap);
+        border-left: 0;
+        border-top: 3px solid $yellow;
+        margin-bottom: 50px;
+    }
+
+    #report .container-menu h4,
+    #report .container-menu label,
+    #report .container-menu span {
+        font-size: 50px;
+    }
+
+    #report .container-menu .products-box .info li {
+        flex-basis: 100%;
+    }
+
+
+
+    #report .container-menu .products-box .info li i {
+        display: block;
+        font-size: 40px;
+    }
+
+    .fa,
+    .fas {
+        font-size: 40px;
+    }
+
+    #report .container-menu .products-box .products .product-box .head-product h2 {
+        font-size: 60px;
+    }
+
+    #report .container-menu .products-box .products .product-box .head-product {
+        text-align: left;
+    }
+
+    #report .container-menu .products-box .products .product-box ul {
+        height: auto;
+    }
+
+
+    #report .container-menu .products-box div .products .product-box {
+        flex-basis: 100%;
+        margin: 30px 0;
+    }
+
+
+    #report .container-menu>div button a {
+        font-size: 40px;
+        margin: 30px 0;      
+    }
+
+    #report .container-menu .products-box{
+        align-items: stretch;   
+    }
+
+    
+}      

@@ -1,0 +1,99 @@
+footer {
+     background-color: #1d1d1d;
+     
+
+     .footer-wave {
+          width: 100%;
+          position: relative;
+
+          img {
+               width: 100%;
+               -o-object-fit: cover;
+               object-fit: cover;
+               position: absolute;
+               bottom: -2px;
+               left: -5px;
+          }
+     }
+
+     .footer-list {
+          @include flex(row, space-between, stretch, nowrap);
+          padding: 100px 8% 20px;         
+
+          ul {   
+               flex-basis: calc(100% / 4 - 20px);
+               background-color: rgb(71, 70, 70);
+               padding: 40px;
+               border-radius: 20px;
+               border: 2px solid rgb(71, 70, 70);
+               transition: border 0.5s linear;
+                      
+         
+               &:hover {   
+                    border-color: $yellow;   
+               } 
+
+               li {   
+                    padding: 3px;
+
+                    &:first-child {
+                         margin-bottom: 20px;
+
+                         strong {                        
+                              @include baloo;
+                              font-weight: 600;
+                              font-size: 25px;
+                              color: $whitePastel;                 
+                         }
+                         
+                    }
+     
+                    a {
+                         font-family: 'Baloo 2', cursive;
+                         font-size: 16px;
+                         color: $whitePastel;
+                         img {
+                              width: 50%;
+                              height: auto;
+                              margin: 10px 0;
+                         }
+                    }
+               }
+          }
+     }
+
+     .links {
+          @include flex(row, space-between, center, nowrap);
+          padding: 40px 8%;
+
+          ul {
+               flex-basis: 85%;
+
+               li {
+                    display: inline-block;
+
+                    a {
+                         color: $whitePastel;
+                         padding: 10px;
+     
+                         i {
+                              font-size: 30px;
+                              transition: transform 0.2s linear;
+
+                              &:hover {
+                                   transform: scale(1.5);
+                              }
+                         }
+                    }
+               }
+          }
+
+          h5 {
+               @include baloo;
+               font-size: 20px;
+               flex-basis: 15%;
+               color: $whitePastel;
+               font-weight: normal;
+          }
+     }
+}

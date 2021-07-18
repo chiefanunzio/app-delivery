@@ -1,0 +1,191 @@
+
+#report{
+
+    @include baloo;
+    background-color: $whitePastel;
+    color: rgb(21, 22, 22);
+
+    .jumbotron {
+        @include flex(column, center, center, nowrap);
+        background-image: url(../img/ristorante-background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: auto;
+        max-height: 700px;
+        padding: 15% 0;
+    
+        h1 {
+            @include itim;   
+            font-size: 4.5vw;
+            padding: 15px 0;
+            color: $blue;
+        }
+    
+        div {
+            @include baloo;
+            font-size: 1.3vw;
+            color: $blue;
+        }
+    }
+
+     .container-menu {
+         padding: 40px 8%;
+         // width: 80%;
+         margin: auto;
+         padding-bottom: 200px;
+
+
+
+         h4,
+         label,
+         span {
+             @include baloo;
+             font-size: 17px;
+             font-weight: normal;
+         }
+
+         label {
+             font-weight: bold;
+         }
+
+         >div {
+
+             text-align: center;
+
+             button {
+                 margin: 20px 0;
+                 background-color: $yellow;
+                 border: 2px solid $blue;
+                 border-radius: 10px;
+                 color: $blue;
+                 overflow: hidden;
+                 padding: 10px 20px;
+                 position: relative;
+                 text-decoration: none;
+                 transition: .3s transform ease-in-out;
+                 will-change: transform;
+                 z-index: 0;
+
+                 &::after {
+                     background-color: $blue;
+                     border-radius: 10px;
+                     content: '';
+                     display: block;
+                     height: 100%;
+                     width: 100%;
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                     transform: translate(-100%, 0) rotate(10deg);
+                     transform-origin: top left;
+                     transition: .3s transform ease-out;
+                     will-change: transform;
+                     z-index: -1
+                 }
+
+                 &:hover::after {
+                     transform: translate(0, 0);
+                 }
+
+                 &:hover {
+                     border: 2px solid $yellow;
+                     color: $yellow;
+                     transform: scale(1.05);
+                     will-change: transform;
+                 }
+
+                 &:hover a {
+                     color: $yellow;
+                 }
+
+
+                 a {
+                     @include baloo;
+                     color: $blue;
+                 }
+
+             }
+         }
+
+         .products-box {
+             @include flex(row, flex-start, flex-start, nowrap);
+
+             .info {   
+                 flex-basis: 30%;
+                 border-left: 3px solid $yellow;
+                 padding-left: 10px;
+                 position: sticky;
+                 position: -webkit-sticky;
+                 top: 300px;
+
+                 li {
+                     @include neomorphismNoHover;
+                     text-align: left;   
+                     padding: 20px;
+                     width: 60%;
+                     margin: 20px 0;
+
+                     i {
+                         color: $blue;
+                         margin-right: 30px;
+                     }
+                 }
+             }
+
+             div {
+                 flex-basis: 70%;
+   
+                 .products {
+                     @include flex(column, center, stretch, wrap);
+                     padding: 20px;
+                     margin-bottom: 20px;
+
+                     .product-box {
+                         @include neomorphismIn;   
+                         flex-basis: calc(50% - 50px);
+                         margin: 15px;
+                         padding: 10px 20px;   
+                         border-bottom: 2px solid $blue;
+                         color: $blue;
+                         
+                         div{
+                             
+                             h3,span{
+                             @include baloo;           
+                             font-size: 35px; 
+                                    
+                             }
+                         }   
+   
+                         
+                        
+
+
+                         
+                            
+      
+                                
+      
+                                
+
+
+
+
+                         }
+                     }
+                 }
+
+             }
+
+         }
+     }
+   
+
+   
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+#edit-restaurant {
+
+    @include form;  
+    
+    form{
+        
+        #myfilebutton{
+            @include baloo;
+            background-color: #dadef5;
+            color: $blue;
+            padding:10px;       
+        }   
+    }
+      
+     ul {
+
+         flex-basis: 100%;
+         @include flex(row, space-between, center, wrap);
+         margin-bottom: 20px;
+
+         li {
+             flex-basis: calc(100% / 5 - 20px);
+             @include flex(row, flex-start, center, nowrap);
+
+             label {
+                 @include baloo;
+                 white-space: nowrap;
+             }
+
+             input {
+                 -webkit-appearance: none;
+                 background-color: $yellow;
+                 border: 1px solid $yellow;
+                 padding: 10px;
+                 border-radius: 5px;
+                 margin: 0 10px;
+                 transition: all 0.3s linear;
+                 position: relative;
+                 width: auto;
+
+
+                 &:hover {
+                     border-color: black;
+                 }
+
+                 &:checked {
+                     background-color: $yellow;
+                     border: 1px solid black;
+                 }
+
+                 &:checked:after {
+                     content: '\2714';
+                     font-size: 20px;
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
+                     color: black;
+                 }
+             }
+         }
+     }   
+}

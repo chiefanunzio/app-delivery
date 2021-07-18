@@ -1,0 +1,31 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+    #transaction {
+        padding: 300px 2%;
+        div {
+            padding: 40px 2%;   
+            h2 {
+                font-size: 50px;
+            }
+            h3 {
+                font-size: 40px;
+            }
+        }   
+    }
+}
+   
+
+
+@media (max-width: 998px) AND (min-width: 768px) {
+    #transaction {   
+        padding: 300px 2%;   
+        div {
+            padding: 40px 2%;
+            h2 {
+                font-size: 60px;   
+            }
+            h3 {   
+                font-size: 50px;
+            }
+        }
+    }
+}   

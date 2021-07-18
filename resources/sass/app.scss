@@ -1,0 +1,47 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+@import 'mixins';
+
+// root
+@import 'partials/header';
+@import 'partials/homepage';
+@import 'partials/footer';   
+@import 'partials/login';
+@import 'partials/register';
+@import 'partials/pass-reset'; 
+
+// lato client
+@import 'partials/client/infoWebPage';
+@import 'partials/client/faq';
+@import 'partials/client/homeRestaurant'; 
+@import 'partials/client/checkout';
+@import 'partials/client/transaction.scss';  
+
+// lato admin
+@import 'partials/admin/dashBoard';   
+@import 'partials/admin/createProduct'; 
+@import 'partials/admin/editProduct';  
+@import 'partials/admin/myProducts';        
+@import 'partials/admin/editRestaurant';
+@import 'partials/admin/report';   
+
+// mediaquery
+@import 'mediaqueries/homepageMedia';
+@import 'mediaqueries/headerMedia';      
+@import 'mediaqueries/footerMedia';   
+@import 'mediaqueries/homeRestaurantMedia';
+@import 'mediaqueries/loginMedia';
+@import 'mediaqueries/registerMedia';
+@import 'mediaqueries/infoWebPageMedia';
+@import 'mediaqueries/faqMedia';
+@import 'mediaqueries/dashBoardMedia';
+@import 'mediaqueries/checkoutMedia';
+@import 'mediaqueries/myProductMedia';
+@import 'mediaqueries/editProductMedia';
+@import 'mediaqueries/editRestaurantMedia.scss';      
+@import 'mediaqueries/createProductMedia.scss';
+@import 'mediaqueries/transactionMedia';   
+@import 'mediaqueries/reportMedia';   

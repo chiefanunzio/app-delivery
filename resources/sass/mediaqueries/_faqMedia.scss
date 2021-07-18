@@ -1,0 +1,59 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #faq .banner h1 {
+          font-size: 5.5vw;
+     }
+
+     #faq .delivery .attach {
+          flex-basis: 50%;
+     }
+
+     #faq .delivery .text {
+          flex-basis: 50%;
+     }
+
+     #faq .delivery .text h2 {
+          font-size: 4vw;
+     }
+
+     #faq .faq .text-box p {
+          font-size: 23px;
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+     #faq .banner h1 {
+          font-size: 5.5vw;
+     }
+
+     #faq .delivery {
+          flex-direction: column;
+          }
+
+     #faq .delivery .attach {
+          flex-basis: 50%;
+          min-width:700px;
+          padding: 30%;
+     }
+
+     #faq .delivery .text {
+          flex-basis: 50%;
+     }
+
+     #faq .delivery .text h2 {
+          margin: 20px 0;
+          font-size: 6vw;
+     }
+
+     #faq .faq .text-box {
+          padding: 20% 5% 20% 5%;
+          }
+
+     #faq .faq .text-box h1 {
+          font-size: 50px;
+          }
+
+     #faq .faq .text-box p {
+          font-size: 45px;
+     }
+}

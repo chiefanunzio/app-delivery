@@ -1,0 +1,72 @@
+#faq {
+     .banner {
+          background-color: rgb(236, 197, 19);
+          @include flex(column, center, center, nowrap);
+          background-image: url(../img/bannerFaq.jpg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          width: auto;
+          padding: 15% 0;
+
+          h1 {
+               font-family: 'Rammetto One', cursive;
+               text-transform:uppercase; 
+               font-size: 3.5vw;
+               padding: 15px 0;
+               color: $blue;              
+          }
+     }
+
+     .delivery {
+
+          @include flex(row, space-between, center,  nowrap);
+          background-color: $bluelight;
+          padding: 200px 8% 0 8%;
+          color: $blue;
+
+          .attach {
+               flex-basis: 40%;
+               padding: 20% 0 25% 0;
+               height: 100%;
+               width: auto;
+               background-image: url(../img/food-delivery-vector-4428252-removebg-preview.png);
+               border-radius: 20px;
+               background-repeat: no-repeat;
+               background-size: 100% auto;
+               background-position: 2% 50%;
+          }
+
+          .text {
+               @include flex(column, center, center, nowrap );
+               text-align: center;
+               flex-basis: 60%;
+
+               h2{
+                    font-family: 'Rammetto One', cursive;
+                    font-size: 3vw;
+                    text-transform:uppercase; 
+               }
+          }
+     }
+
+     .faq {
+          @include theWave($bluelight, $whitePastel);
+
+          .text-box {
+               padding: 200px 8% 350px 8%;
+
+               h1 {
+                    @include baloo;
+                    color: $blue;
+                    font-size: 30px;
+               }
+     
+               p {
+                    @include baloo;
+                    margin: 15px 0 50px 0;
+                    color: $blue;
+               }
+          }
+     }
+}

@@ -1,0 +1,92 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #checkout section form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin-bottom: 200px;
+          padding: 0 40px 40px;
+          border-radius: 10px;
+          background: #f1f1f1;
+          box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+          transition: all 0.5s linear;
+     }
+
+     #checkout section form fieldset {
+          width: 100%;
+          flex-basis: 100%;
+          background-color: #dadef5;
+          border: 3px solid #25385f;
+          padding: 40px;
+          border-radius: 10px;
+          margin: 50px 0;
+          }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+     #checkout {
+          background-color: #f1f1f1;
+          padding: 15% 2% 9% 2%;
+     }
+     #checkout section form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin-bottom: 200px;
+          padding: 0 40px 40px;
+          border-radius: 10px;
+          background: #f1f1f1;
+          box-shadow: 5px 5px 10px #cdcdcd, -5px -5px 10px #ffffff;
+          transition: all 0.5s linear;
+     }
+
+     #checkout section form fieldset {
+          width: 100%;
+          flex-basis: 100%;
+          background-color: #dadef5;
+          border: 3px solid #25385f;
+          padding: 40px;
+          border-radius: 10px;
+          margin: 50px 0;
+     }
+
+     #checkout section form fieldset legend {
+          font-family: "Itim", cursive;
+          font-size: 60px;
+          letter-spacing: 2px;
+          padding: 20px;
+     }
+
+     #checkout section form fieldset label, #checkout section form fieldset input {
+          font-size: 50px;
+     }
+
+     #checkout section form .braintree-sheet__text {
+          font-size: 60px;
+     }
+
+     svg {
+          width: 80px;
+          height: auto;
+     }
+
+     #checkout section form .braintree-form__label {
+          font-size: 50px;
+     }
+
+     input {
+          font-size: 40px;
+     }    
+
+     .braintree-sheet {
+           max-height: none;
+     }
+
+     #checkout section form fieldset button {
+          font-size: 40px;
+     }
+}

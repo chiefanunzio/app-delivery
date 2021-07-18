@@ -1,0 +1,33 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #editProduct form {
+          flex-basis: 100%
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     #editProduct {
+          padding: 20% 2%;
+     }
+
+     #editProduct form {
+          flex-basis: 100%
+     }
+
+     #editProduct form fieldset legend {
+          font-size: 60px;
+     }
+    
+     #editProduct form fieldset label, #editProduct form fieldset input {
+          font-size: 50px;
+     }
+
+     #editProduct form fieldset #description,
+     #editProduct form fieldset #type-food {      
+          font-size: 40px;
+     }
+
+     #editProduct form fieldset button {
+         font-size: 40px;
+         margin: 20px 0;
+     }
+}

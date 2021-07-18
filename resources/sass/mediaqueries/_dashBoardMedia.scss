@@ -1,0 +1,144 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #dashboard {
+          grid-template-columns: 15% auto 5%;
+          grid-template-rows: auto 1fr;
+          grid-template-areas: "welcome welcome welcome" 
+          "navbar my-restaurants my-restaurants";
+     }
+
+     #dashboard .my-restaurants ul li {
+          margin: 50px;
+     }
+      #dashboard .my-restaurants ul li>div .modifica {
+          top: 100px;
+      }   
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     #dashboard {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto 1fr;
+          grid-template-areas: "welcome welcome welcome" 
+                              "navbar navbar navbar" 
+                              "my-restaurants my-restaurants my-restaurants";
+     }
+
+     #dashboard .welcome h1 {
+          font-size: 60px;
+          margin: 50px 0;
+          }
+
+     #dashboard .my-restaurants ul li {
+          flex-basis: 740px;
+          margin: 70px 0;
+     }
+
+     #dashboard .navbar ul > li {
+          margin-bottom: 50px;
+     }
+
+     #dashboard .navbar ul > li:first-child a {
+          left: -350;   
+          i{
+               font-size: 60px;
+               margin-left: 60px;
+          }
+          &:hover{
+               left: 0;
+          }
+     }
+
+     #dashboard .navbar ul > li:last-child a {   
+          left: -260; 
+          i {
+              font-size: 60px;   
+              margin-left: 60px;
+          }
+          &:hover {
+          left: 0;   
+          }
+     }
+
+     #dashboard .navbar ul > li > a h4 {   
+            
+          font-size: 50; 
+     }
+
+     #dashboard .navbar {
+          padding-bottom: 0; 
+     }
+
+     #dashboard .my-restaurants ul li > div a {
+          font-size: 40px;
+     }
+
+     #dashboard .my-restaurants ul li > div button {
+          font-size: 30px;
+     }
+
+     #dashboard .my-restaurants ul li > div .modifica a {
+          font-size: 40px;
+     }
+
+     #dashboard .my-restaurants ul li > div .modifica {
+          top: 100px;
+     }
+
+     #dashboard .my-restaurants ul li > div button:focus + .modifica {
+          transition: all 1s linear;
+          top: -120px;
+     }
+
+     #dashboard .my-restaurants > h3 {
+          font-size: 60px;
+     }
+
+     #dashboard .my-restaurants ul li > div:last-child {
+     height: 320px;
+     }
+
+     #dashboard .create {
+          padding: 50px 2% 200px;
+     }
+
+     #dashboard .create form fieldset legend {
+          font-size: 60px;
+     }
+
+     #dashboard .create form fieldset label, #dashboard .create form fieldset input {
+          font-size: 50px;
+     }
+
+     #dashboard .create ul {
+          justify-content: space-between;   
+     }
+
+     #dashboard .create form fieldset button {
+          font-size: 40px;
+     }
+        
+     #dashboard .create div:last-child {
+          text-align: center;
+     }
+
+     #dashboard .create ul li input {
+          padding: 20px;
+          border-radius: 12px;
+     }
+
+     #dashboard .create ul li input:checked:after {
+          font-size: 30px;
+     }
+
+     #dashboard .create h2 {
+          font-size: 60px;
+     }
+
+     #dashboard .create ul li{
+          flex-basis: calc(100% / 2 - 20px);   
+     }   
+
+     #dashboard .my-restaurants ul li>div .modifica{
+          top:100px;   
+     }
+}

@@ -1,0 +1,32 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #register section form {
+          flex-basis: 80%;
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+     #register section {
+          padding: 15% 2% 10% 2%;
+     }
+
+     #register section form {
+          flex-basis: 100%;
+     }
+
+     #register section form fieldset legend {
+          font-size: 60px;
+     }
+
+     #register section form fieldset label {
+          font-size: 50px;
+     }
+
+     #register section form fieldset div {
+          margin: 40px 0;
+     }
+
+     #register section form fieldset div button {
+          font-size: 40px;
+     }
+}

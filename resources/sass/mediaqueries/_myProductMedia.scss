@@ -1,0 +1,118 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #my-product .container-menu {
+          padding: 40px 5%;
+          margin: auto;
+          padding-bottom: 200px;
+     }
+
+     #my-product .container-menu .products-box .info {
+          flex-basis: 40%;
+          border-left: 3px solid #ffc244;
+          padding-left: 10px;
+          position: sticky;
+          position: -webkit-sticky;
+          top: 300px;
+     }
+
+     #my-product .container-menu .products-box .products {
+          flex-basis: 100%;
+     }
+
+     #my-product .container-menu .products-box div .products .product-box { 
+          flex-basis: 100%;
+     }
+          
+     
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     #my-product .container-menu {
+          padding: 40px 5%;
+          margin: auto;
+          padding-bottom: 200px;
+     }
+
+     #my-product .jumbotron h1 {
+          font-size: 7vw;
+     }
+
+     #my-product .jumbotron div {
+          font-size: 3vw;
+     }
+
+     #my-product .container-menu > div > a {
+          font-size: 40px;
+          }
+
+     #my-product .container-menu .products-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-wrap: nowrap;
+     }
+
+     #my-product .container-menu .products-box .info {
+          position: inherit;
+          top: 0;
+          @include flex(row, space-between, stretch, wrap);
+          border-left: 0;
+          border-top: 3px solid $yellow;
+          margin-bottom: 50px;
+     }
+
+     #my-product .container-menu h4, #my-product .container-menu label, #my-product .container-menu span {
+          font-size: 50px;
+          }
+
+     #my-product .container-menu .products-box .info li {
+          flex-basis: 100%;
+     }
+
+     
+
+     #my-product .container-menu .products-box .info li i {
+          display: block;
+          font-size: 40px;
+     }
+
+     .fa, .fas {
+          font-size: 40px;
+     }
+
+     #my-product .container-menu .products-box .products .product-box .head-product h2 {
+          font-size: 60px;
+     }
+
+     #my-product .container-menu .products-box .products .product-box .head-product {
+          text-align: left;
+     }
+
+     #my-product .container-menu .products-box .products .product-box ul {
+          height: auto;
+     }
+
+     #my-product .container-menu .products-box .products {
+          flex-basis: 60%;
+     }
+
+     #my-product .container-menu .products-box div .products .product-box {
+     flex-basis: 100%;
+     margin: 30px 0;
+}    
+
+     #my-product .container-menu .products-box .products .product-box ul li:last-child div button a {
+          font-size: 40px;
+     }
+
+     #my-product .container-menu .products-box div .products .product-box ul li:last-child div button a {
+          font-size: 40px;
+          margin: 30px 0;
+     }
+
+     #my-product .container-menu > div button a {
+          font-size: 40px;
+          margin: 30px 0;
+     }
+    
+}

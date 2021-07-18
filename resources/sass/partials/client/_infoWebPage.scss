@@ -1,0 +1,102 @@
+#chi-siamo {
+
+     .banner {
+
+          div {
+               @include flex(column, center, center, nowrap);
+               background-image: url(../img/chisiamo.jpg);
+               background-size: contain;
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+               width: auto;
+               max-height: 700px;
+               padding: 15% 0;
+
+               h1 {
+                    font-family: 'Rammetto One', cursive;
+                    text-transform:uppercase; 
+                    font-size: 3.5vw;
+                    padding: 15px 0;
+                    color: $blue;
+               }
+          }
+     }
+
+     .map {
+
+          @include flex(row, space-between, center,  nowrap);
+          background-color: $bluelight;
+          padding: 200px 8% 0 8%;
+          color: $blue;
+
+          .attach {
+               flex-basis: 40%;
+               padding: 25% 0;
+               height: 100%;
+               width: auto;
+               margin: 0 50px;
+               background-image: url(../img/verde-italia.png);   
+               border-radius: 20px;
+               background-repeat: no-repeat;
+               background-size: 100% auto;
+               background-position: 2% 50%;
+          }
+
+          .text {
+               @include flex(column, center, center, nowrap );
+               text-align: center;
+               flex-basis: 60%;
+
+               h2{
+                    font-family: 'Rammetto One', cursive;
+                    font-size: 3vw;
+                    text-transform:uppercase; 
+               }
+          }
+
+     }
+
+     .we {
+         @include theWave($bluelight, $whitePastel);
+          .text-box {
+               padding: 200px 8%;
+
+               p {
+                    @include baloo;
+                    margin-bottom: 30px;
+                    color: $blue;
+               }
+          }
+     }
+
+     .box {
+          @include theWave($whitePastel, $yellow);
+
+          ul {
+               @include flex(row, space-around, center,  nowrap);
+               padding: 20%;
+               
+               li {
+                    flex-basis: calc(30% - 20px);
+                    text-align: center;
+                    @include theButtonDesign($blue, $bluelight, $red);
+                    color: $whitePastel;
+                    border: 2px solid $blue;
+
+                    h2, h5 {
+                         font-weight: normal;
+                    }
+
+                    h2 {
+                         @include baloo;
+                         font-weight: 600;
+                         font-size: 40px; 
+                    }
+
+                    h5 {
+                         @include baloo;
+                    }
+               }
+          }
+     }     
+}

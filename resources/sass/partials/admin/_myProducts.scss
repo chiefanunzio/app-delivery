@@ -1,0 +1,238 @@
+#my-product {
+    @include baloo;
+    background-color: $whitePastel;
+    color: rgb(21, 22, 22);
+
+    .jumbotron {
+        @include flex(column, center, center, nowrap);
+        background-image: url(../img/ristorante-background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: auto;
+        max-height: 700px;
+        padding: 15% 0;
+
+        h1 {
+            @include itim;
+            font-size: 4.5vw;
+            padding: 15px 0;
+            color: $blue;
+        }
+
+        div {
+            @include baloo;
+            font-size: 1.3vw;
+            color: $blue;
+        }
+    }
+   
+    .container-menu {
+        padding: 40px 8%;
+        // width: 80%;
+        margin: auto;
+        padding-bottom: 200px;
+
+        
+          
+        h4,
+        label,   
+        span{
+            @include baloo;
+            font-size: 17px;   
+            font-weight: normal;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        >div {
+
+            text-align: center;
+
+            button {
+                margin: 20px 0;
+                background-color: $yellow;
+                border: 2px solid $blue;
+                border-radius: 10px;
+                color: $blue;
+                overflow: hidden;
+                padding: 10px 20px;
+                position: relative;
+                text-decoration: none;
+                transition: .3s transform ease-in-out;
+                will-change: transform;
+                z-index: 0;
+                
+                &::after {
+                    background-color: $blue;
+                    border-radius: 10px;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translate(-100%, 0) rotate(10deg);
+                    transform-origin: top left;
+                    transition: .3s transform ease-out;
+                    will-change: transform;
+                    z-index: -1
+                }
+                
+                &:hover::after {
+                    transform: translate(0, 0);
+                }
+                &:hover {
+                    border: 2px solid $yellow;
+                    color: $yellow;
+                    transform: scale(1.05);
+                    will-change: transform;
+                }
+            
+                &:hover a {
+                    color: $yellow;
+                }
+            
+            
+                a {
+                    @include baloo;
+                    color: $blue;
+                }
+                
+            }
+        }
+
+        .products-box {
+           @include flex(row, flex-start, flex-start, nowrap);
+           
+           .info {
+               flex-basis: 30%;
+               border-left: 3px solid $yellow;
+               padding-left: 10px;
+               position: sticky;
+               position: -webkit-sticky;
+               top: 300px;
+
+               li {
+                    @include neomorphismNoHover;
+                    text-align: left;
+                    padding: 20px;
+                    width: 60%;
+                    margin: 20px 0;
+
+                    i {
+                        color: $blue;
+                        margin-right: 30px;
+                    }
+                }
+           }
+           div {
+            flex-basis: 70%;
+
+            .products {
+                @include flex(row, center, stretch, wrap);
+                .product-box {
+                    @include neomorphism;
+                    flex-basis: calc(50% - 50px);
+                    margin: 15px;
+                    padding: 20px;
+
+                    .head-product {
+                        @include flex(row, space-between, center, nowrap);
+                        // border: 1px solid black;
+                        // background-color: $yellow;
+                        padding: 10px 30px;
+                        // border-top-left-radius: 25px;
+                        // border-top-right-radius: 25px;
+
+                        h2 {
+                            @include baloo;
+                            font-size: 18px;
+                            color: $blue;
+                        }
+
+                        .active {
+                            color: rgb(35, 134, 35);
+                        }
+
+                        .not-active {
+                            color: $red;
+                        }
+
+
+
+
+                    }
+
+                    ul {
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        height: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        
+
+                        li {
+                            padding: 10px 20px 10px 5px;
+                            border-bottom: 2px solid $blue;
+                            color: $blue;
+
+                            &:first-child {
+                                // display: grid;
+                                // grid-template-columns: 20% auto 10% 10%;
+                                // grid-template-rows: auto;
+                                // column-gap: 15px;
+                                // flex-grow: 1;
+                                text-align: left;
+
+                                div {
+                                    @include flex(row,flex-start, flex-start, nowrap);
+                                    margin: 15px 0;
+
+                                    label {
+                                        flex-basis: 50%;
+                                    }
+
+                                    h4 {
+                                        flex-basis: 50%;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                padding: 40px 0 10px;
+                                border: none;
+                                @include flex(row, center, center, nowrap);
+
+                                div {
+                                    button {
+                                        @include definitiveButtonDesign;
+                                        margin: 20px;
+
+                                        a {
+                                            @include baloo;   
+                                            color: $blue;  
+                                            font-size: 18px;  
+                                        }
+                                    }   
+                                }
+
+                            }
+
+
+                        }
+
+
+                    }
+                }
+            }
+
+           }
+           
+        } 
+    }
+}

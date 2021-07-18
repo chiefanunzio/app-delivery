@@ -1,0 +1,267 @@
+#dashboard {
+    color: $blue;
+    position: relative;
+    display: grid;
+    background-color: $whitePastel;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "welcome welcome welcome"
+        "navbar my-restaurants .";
+
+
+    .welcome {
+        grid-area: welcome;
+        background-color: $whitePastel;
+        padding: 100px 0;
+        @include flex(row, center, center, nowrap);
+        font-family: indie flower, cursive;
+        font-size: 40px;
+
+        h1 {
+            @include baloo;
+            font-weight: 600;
+            font-size: 50px;
+            margin-top: 50px;
+            padding: 20px;
+            @include neomorphismIn; 
+            border-radius: 10px;
+        }
+    }
+
+    .navbar {
+        background-color: $whitePastel;
+        padding-bottom: 200px;
+
+        ul {
+            position: sticky;
+            top: 100px;
+
+
+
+            >li {
+                position: relative;
+                height: 110px;
+
+                &:first-child a {
+                    left: -185px;
+                }
+
+                &:last-child a {
+                    left: -122px;
+                }
+
+                >a {
+                    @include flex(row, space-between, center, nowrap);
+                    @include itim;
+                    position: absolute;
+                    top: 0;
+                    font-size: 30px;   
+                    padding: 30px 10%;
+                    color: $blue;
+                    @include neomorphismNoHover;   
+
+                    h4 {
+                        margin-right: 20px;
+                    }
+   
+                    &:hover, &:focus {
+                        left: 0;
+                    }   
+                }
+
+                .buttonActive {
+                    @include neomorphismIn;
+                    
+                }
+
+            }
+
+        }
+
+    }
+
+    .my-restaurants {
+        grid-area: my-restaurants;
+        background-color: $whitePastel;
+        padding: 30px 0;
+        padding-bottom: 200px;
+
+        >h3 {
+            padding: 10px;
+            @include baloo;
+            font-weight: 600;
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 30px;   
+        }
+
+        ul {
+            @include flex(row, center, center, wrap);
+            padding: 30px 0;
+   
+            li {
+                @include neomorphism;
+                flex-basis: 370px;    
+                margin: 40px 30px;   
+                z-index: 10;
+
+
+
+                >div {   
+                    position: relative;
+                    @include flex(row, space-between, center, nowrap);
+
+                    .modifica {
+                        text-align: center;
+                        position: absolute;
+                        top: 100px;         
+                        right: 0;
+                        padding: 20px;   
+                        width: 100%;   
+       
+                        &:hover {
+                            top: -70px;   
+                                 
+                            display: block;
+                        }
+                        a {
+                            @include baloo;
+                            @include neomorphism;   
+                            font-size: 20px;
+                            padding: 10px 20px;
+                            margin: 0 35px;   
+                        }
+
+                    }      
+
+                    button {
+                        @include baloo;
+                        font-size: 13px;
+                        @include neomorphismNoHover;
+                        padding: 5px 15px;
+                        margin-right: 20px;
+                        border-radius: 5px;
+                        border: 0;
+
+                        &:active {
+                            box-shadow: inset 5px 5px 10px #cdcdcd,
+                                        inset -5px -5px 10px #ffffff;
+                        }
+   
+                        &:focus +.modifica {
+                            transition: all 1s linear;
+                            top: -80px;   
+                               
+                            a{   
+                                transition: 1s linear;   
+                                margin: 0 35px;
+                                &:hover{
+                                    @include neomorphismIn;   
+                                }
+                            }                  
+                        }  
+   
+                    }   
+       
+                    a {
+                        @include baloo;
+                        color: $blue;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    h3 {
+                        padding: 10px;
+                        @include itim;
+                        font-size: 25px;
+                        font-weight: normal;
+                    }
+
+                    &:first-child {
+                        @include flex(row, space-between, center, nowrap);
+                        border-bottom: 1px solid black;
+                        margin-bottom: 10px;
+                    }
+
+                    &:last-child {
+
+                        height: 160px;
+                        width: 100%;
+
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        padding: 0 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+   
+    .create {
+        grid-area: my-restaurants;
+        @include form;
+        padding: 50px 8% 200px ;  
+   
+        h2{
+            @include baloo; 
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;   
+            margin: 0 0 50px 0;
+        }
+        ul {
+
+            flex-basis: 100%;
+            @include flex(row, space-between, center, wrap);
+            margin-bottom: 20px;
+            
+            li {
+                flex-basis: calc(100% / 5 - 20px);
+                @include flex(row, flex-start, center, nowrap);
+                
+                label {
+                    @include baloo;
+                    white-space: nowrap;
+                }
+                
+                input {
+                    -webkit-appearance: none;
+                    background-color: $yellow;   
+                    border: 2px solid $blue;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin: 0 10px;
+                    transition: all 0.3s linear;
+                    position: relative;
+                    width: auto;   
+                    
+
+                    &:checked {
+                        background-color: $yellow;
+                        border-color: $red;
+                    }
+
+                    &:checked:after {
+                        content: '\2714';
+                        font-size: 20px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color:$red;
+                    }
+                }
+            }
+        }
+        button {
+            font-size: 20px;
+        }
+    }   
+
+}

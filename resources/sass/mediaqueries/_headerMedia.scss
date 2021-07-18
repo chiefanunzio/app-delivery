@@ -1,0 +1,92 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     header ul li .logo {
+          font-size: 45px;
+     }
+
+     header ul li a {
+          font-size: 20px;
+     }          
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+     .hide {
+          display: none;
+     }
+
+     header {
+          padding: 0 5%;
+     }
+
+     header ul li .logo span:first-child {
+          font-size: 80px;
+     }
+
+     header ul li .logo span:last-child {
+          display: none;
+     }
+
+     header ul .hamburger {
+         display: block;
+     }
+
+     header ul .show {
+          visibility: visible;
+          height: 100vh;
+          display: block;
+          transition: height 0.5s linear;
+     }
+}
+
+@media (max-width: 768px) AND (min-width: 450px){
+     .hide {
+          display: none;
+     }
+
+     header {
+          padding: 0 5%;
+          }
+
+     header ul .hamburger {
+         display: block;
+     }
+
+     header ul .show {
+          display: block;
+     }
+
+     header ul li .logo {
+          font-size: 70px;
+     }
+}
+
+@media (max-width: 450px) {
+     .hide {
+          display: none;
+     }
+
+     header {
+          padding: 0 5%;
+          }
+
+     header ul .hamburger {
+         display: block;
+     }
+
+     header ul .show {
+          display: block;
+     }
+
+     header ul li .logo {
+          font-size: 40px;
+     }
+
+     header ul .hamburger-menu {
+          top: 10%;
+          right: 0;
+     }
+
+     header ul ul {
+          top: 106%;
+          right: -61%;
+     }
+}

@@ -1,0 +1,46 @@
+@media (max-width: 1200px) AND (min-width: 998px) {
+     #login section form {
+          flex-basis: 80%;
+     }
+}
+
+@media (max-width: 998px) AND (min-width: 768px) {
+
+     #login section {
+          padding: 15% 2% 9% 2%;
+     }
+
+     #login section form {
+          flex-basis: 100%;
+     }
+
+     #login section form fieldset legend {
+          font-size: 60px;
+     }
+
+     #login section form fieldset label {
+          font-size: 50px;
+     }
+
+     #login section form fieldset .checkbox-box {
+          display: flex;
+          align-items: center;
+     }
+
+     #login section form fieldset div {
+          margin: 40px 0;
+     }
+
+     #login section form fieldset .checkbox {
+          padding: 20px;
+          border-radius: 10px;
+     }
+
+     #login section form fieldset div button {
+          font-size: 40px;
+     }
+
+     #login section form fieldset a {
+          font-size: 40px;
+     }
+}
